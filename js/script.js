@@ -1,3 +1,6 @@
+
+
+
 let weather = {
   paris: {
     temp: 19.7,
@@ -40,36 +43,79 @@ if (city.toLowerCase() === 'paris') {
 
 
 
+
+ 
+
+
+
 // -------------------------
 
-let now = new Date();
+// let now = new Date();
 
-let num = now.getDate()
-console.log(num);
+// let num = now.getDate()
+// console.log(num);
 
-console.log(now.getMilliseconds());
+// console.log(now.getMilliseconds());
 
-let days = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ]
-let day = days[now.getDay()]
-console.log(day);
+// let days = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ]
+// let day = days[now.getDay()]
+// console.log(day);
 
-let year = now.getFullYear()
-console.log(year);
+// let year = now.getFullYear()
+// console.log(year);
 
-let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-let month = months[now.getMonth()]
-console.log(month);
+// let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+// let month = months[now.getMonth()]
+// console.log(month);
 
-console.log(`Today is ${day}, ${month} ${num}, ${year}`)
+// console.log(`Today is ${day}, ${month} ${num}, ${year}`)
 
-const formatDate = function(){
-  return `Today is ${day}, ${month} ${num}, ${year}`
-}
+// const formatDate = function(){
+//   return `Today is ${day}, ${month} ${num}, ${year}`
+// }
 
-console.log (formatDate())
+// console.log (formatDate())
+
+// його рішення ----
 
 
+// function formatDate(date) {
+//   let days = [
+//     "Sunday",
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday"
+//   ];
 
+//   let months = [
+//     "January",
+//     "February",
+//     "March",
+//     "April",
+//     "May",
+//     "June",
+//     "July",
+//     "August",
+//     "September",
+//     "October",
+//     "November",
+//     "December"
+//   ];
+
+//   let currentYear = date.getFullYear();
+//   let currentDay = days[date.getDay()];
+//   let currentMonth = months[date.getMonth()];
+//   let currentDate = date.getDate();
+
+//   let formattedDate = `Today is ${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
+
+//   return formattedDate;
+// }
+
+// console.log(formatDate(currentTime));
   
   
   
