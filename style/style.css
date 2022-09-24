@@ -24,6 +24,7 @@ header {
   align-items: center;
   margin-bottom: 15px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .temperature {
@@ -35,7 +36,8 @@ header {
 }
 
 .city {
-  margin-left: auto;
+  /* margin-left: auto; */
+  margin: 0 auto;
 }
 
 .weather-now_bottom {
