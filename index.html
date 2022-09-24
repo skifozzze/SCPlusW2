@@ -1,82 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 Home work</title>
+    <link rel="stylesheet" href="/style/reset.css" />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 2 Home work</title>
-  <link rel="stylesheet" href="/style/reset.css">
-  <link rel="stylesheet" href="/style/style.css">
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="weather-now">
+          <div class="weather-now_top">
+            <img src="images/sun2.svg" alt="sun icon" width="80" />
+            <div class="temp-box">
+              <h1 class="temperature">28</h1>
+              <a class="cel" href="">С°</a>
+              <span>/</span>
+              <a class="far" href="">F°</a>
+            </div>
 
-<body>
-  <div class="container">
-    <header>
-      <div class="weather-now">
-        <div class="weather-now_top">
-          <img src="images/sun2.svg" alt="sun icon" width="80">
-          <h1 class="temperature">28 ° С</h1>
-          <ul class="indicators">
-            <li class="indicators_data">precipitation 0%
-            </li>
-            <li class="indicators_data">humidity 33%
-            </li>
-            <li class="indicators_data">wind 19 km/h</li>
-          </ul>
-          <h1 class="city">Kyiv</h1>
+            <ul class="indicators">
+              <li class="indicators_data">precipitation 0%</li>
+              <li class="indicators_data">humidity 33%</li>
+              <li class="indicators_data">wind 19 km/h</li>
+            </ul>
+            <h1 class="city">Kyiv</h1>
+          </div>
+          <div class="weather-now_bottom">
+            <h2 class="now_day">Thursday</h2>
+            <h2 class="now_time">15:55</h2>
+            <h2 class="now_date">30/08/2022</h2>
+          </div>
         </div>
-        <div class="weather-now_bottom">
-          <h2 class="now_day"> Thursday
-          </h2>
-          <h2 class="now_time">15:55</h2>
-          <h2 class="now_date">30/08/2022</h2>
-        </div>
-      </div>
-      <form class="city-search_form" action="">
-        <label for="city"></label>
-        <input class="text" type="text" onfocus="" placeholder="Kyiv">
-        <input class="search" type="button" value="search">
-        <input class="current" type="button" value="current">
-      </form>
-    </header>
-    <main>
-      <ul class="weather_week">
-        <li class="weather_week-day">
-          <img class="weather-img" src="images/cloud.svg" alt="cloud icon" width="50">
-          <p class="weather_week-day">Wednesday
-          </p>
-          <p class="weather_week-temperature">29° С / 15° С</p>
-        </li>
-        <li class="weather_week-day">
-          <img class="weather-img" src="images/sun.svg" alt="sun icon" width="50">
-          <p class="weather_week-day">Thursday
-          </p>
-          <p class="weather_week-temperature">23° С / 12 ° С</p>
-        </li>
-        <li class="weather_week-day">
-          <img class="weather-img" src="images/cloud.svg" alt="cloud icon" width="50">
-          <p class="weather_week-day">Friday
-          </p>
-          <p class="weather_week-temperature">21 ° С / 8 ° С</p>
-        </li>
-        <li class="weather_week-day">
-          <img class="weather-img" src="images/rain.svg" alt="rain icon" width="50">
-          <p class="weather_week-day">Saturday
-          </p>
-          <p class="weather_week-temperature">21° С / 11 ° С</p>
-        </li>
-        <li class="weather_week-day">
-          <img class="weather-img" src="images/wind.svg" alt="wind icon" width="50">
-          <p class="weather_week-day">Sunday
-          </p>
-          <p class="weather_week-temperature">19 ° С / 9 ° С</p>
-        </li>
-      </ul>
-    </main>
-  </div>
-  <script src="/js/date.js" type="module"></script>
-  <script src="/js/script.js" type="module"></script>
-</body>
-
+        <form class="city-search_form" action="">
+          <label for="city"></label>
+          <input class="text" type="text" onfocus="" placeholder="Kyiv" />
+          <input class="search" type="submit" value="search" />
+          <input class="current" type="submit" value="current" />
+        </form>
+      </header>
+      <main>
+        <ul class="weather_week">
+          <li class="weather_week-day">
+            <img
+              class="weather-img"
+              src="images/cloud.svg"
+              alt="cloud icon"
+              width="50"
+            />
+            <p class="weather_week-day">Wednesday</p>
+            <p class="weather_week-temperature">29° С / 15° С</p>
+          </li>
+          <li class="weather_week-day">
+            <img
+              class="weather-img"
+              src="images/sun.svg"
+              alt="sun icon"
+              width="50"
+            />
+            <p class="weather_week-day">Thursday</p>
+            <p class="weather_week-temperature">23° С / 12 ° С</p>
+          </li>
+          <li class="weather_week-day">
+            <img
+              class="weather-img"
+              src="images/cloud.svg"
+              alt="cloud icon"
+              width="50"
+            />
+            <p class="weather_week-day">Friday</p>
+            <p class="weather_week-temperature">21 ° С / 8 ° С</p>
+          </li>
+          <li class="weather_week-day">
+            <img
+              class="weather-img"
+              src="images/rain.svg"
+              alt="rain icon"
+              width="50"
+            />
+            <p class="weather_week-day">Saturday</p>
+            <p class="weather_week-temperature">21° С / 11 ° С</p>
+          </li>
+          <li class="weather_week-day">
+            <img
+              class="weather-img"
+              src="images/wind.svg"
+              alt="wind icon"
+              width="50"
+            />
+            <p class="weather_week-day">Sunday</p>
+            <p class="weather_week-temperature">19 ° С / 9 ° С</p>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <script src="/js/date.js" type="module"></script>
+    <script src="/js/search.js" type="module"></script>
+    <script src="/js/celfar.js" type="module"></script>
+    <script src="/js/script.js" type="module"></script>
+  </body>
 </html>

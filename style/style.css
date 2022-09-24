@@ -26,7 +26,7 @@ header {
 }
 
 .temperature {
-  margin: 0 10px;
+  margin-right: 10px;
 }
 
 .indicators {
@@ -58,15 +58,15 @@ header {
   background-color: transparent;
   cursor: pointer;
   color: grey;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .search:hover {
-  border: 3px solid grey
+  border: 3px solid grey;
 }
 
 .current:hover {
-  border: 3px solid grey
+  border: 3px solid grey;
 }
 
 .current {
@@ -93,4 +93,28 @@ main .weather_week {
 
 .weather-img {
   margin: 0 auto 20px;
+}
+
+.cel,
+.far,
+span {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.5s;
+  font-size: 32px;
+}
+
+.far:hover {
+  color: grey;
+}
+.cel:hover {
+  color: grey;
+}
+
+.temp-box {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 20px;
+  gap: 5px;
+  align-items: center;
 }
