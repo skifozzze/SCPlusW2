@@ -39,6 +39,7 @@ header {
 .city {
   /* margin-left: auto; */
   margin: 0 auto;
+  text-transform: capitalize;
 }
 
 .weather-now_bottom {
@@ -122,4 +123,10 @@ span {
   margin: 0 20px;
   gap: 5px;
   align-items: center;
+}
+
+.link {
+  color: grey;
+  text-decoration: none;
+
 }
