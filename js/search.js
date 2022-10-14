@@ -5,18 +5,29 @@ const citySearch = function (event) {
   cityNow.innerHTML = `${city.value}`;
 
   let apiKey = "ac209dae1f283fb332a5bb7f50b0f468";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=metric&appid=ac209dae1f283fb332a5bb7f50b0f468`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=metric&appid=${apiKey}`;
 
   const showTemperature = function (response) {
-    let tempNow = Math.round(response.data.main.temp);
-    
-    let temp = document.querySelector(".temperature");
-    temp.innerHTML = `${tempNow}`; 
+    let tempNowEl = Math.round(response.data.main.temp);
+    let tempEl = document.querySelector(".temperature");
+    tempEl.innerHTML = `${tempNowEl}`; 
+
+    let windEl = document.querySelector('.indicators_data-wind');
+    windEl.innerHTML = `${response.data.wind.speed}`
+
+    let humidityEl = document.querySelector('.indicators_data-humidity');
+    humidityEl.innerHTML = `${response.data.main.humidity}`
+
+    let precipitationEl = document.querySelector('.indicators_data-precipitation');
+    precipitationEl.innerHTML = `${response.data.wind.speed}`
+
+    console.log(response.data)
+
     
 
     const degreesFar = function (event) {
      event.preventDefault();     
-     temp.innerHTML = `${Math.round((tempNow * 9) / 5 + 32)}`;
+     temp.innerHTML = `${Math.round((tempNowEl * 9) / 5 + 32)}`;
     };
 
     let farTemp = document.querySelector(".far");
@@ -24,7 +35,7 @@ const citySearch = function (event) {
 
     const degreesCel = function (event) {
       event.preventDefault();      
-      temp.innerHTML = `${tempNow}`;
+      temp.innerHTML = `${tempNowEl}`;
     };
 
     let celTemp = document.querySelector(".cel");
@@ -38,6 +49,7 @@ const citySearch = function (event) {
 
 let citySearchForm = document.querySelector(".city-search_form ");
 citySearchForm.addEventListener("submit", citySearch);
+
 
 
 

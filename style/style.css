@@ -36,6 +36,13 @@ header {
   color: grey;
 }
 
+.indicators_data-wind,
+.indicators_data-humidity,
+.indicators_data-precipitation {
+  font-size: inherit;
+  margin-right: 5px;
+}
+
 .city {
   /* margin-left: auto; */
   margin: 0 auto;
