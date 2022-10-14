@@ -11,10 +11,29 @@ const citySearch = function (event) {
     let tempNow = Math.round(response.data.main.temp);
     
     let temp = document.querySelector(".temperature");
-    temp.innerHTML = `${tempNow}`;
-  };
+    temp.innerHTML = `${tempNow}`; 
+    
+
+    const degreesFar = function (event) {
+     event.preventDefault();     
+     temp.innerHTML = `${Math.round((tempNow * 9) / 5 + 32)}`;
+    };
+
+    let farTemp = document.querySelector(".far");
+    farTemp.addEventListener("click", degreesFar);
+
+    const degreesCel = function (event) {
+      event.preventDefault();      
+      temp.innerHTML = `${tempNow}`;
+    };
+
+    let celTemp = document.querySelector(".cel");
+    celTemp.addEventListener("click", degreesCel);      
+  }; 
+    
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+  
 };
 
 let citySearchForm = document.querySelector(".city-search_form ");
