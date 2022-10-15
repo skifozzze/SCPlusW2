@@ -5,6 +5,9 @@
   border-radius: 10px;
   padding: 20px;
 }
+.hh {
+  display: block;
+}
 
 header {
   display: flex;
@@ -135,5 +138,8 @@ span {
 .link {
   color: grey;
   text-decoration: none;
+}
 
+.indicators_data-descr {
+  text-transform: capitalize;
 }

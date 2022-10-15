@@ -10,51 +10,47 @@ const citySearch = function (event) {
   const showTemperature = function (response) {
     let tempNowEl = Math.round(response.data.main.temp);
     let tempEl = document.querySelector(".temperature");
-    tempEl.innerHTML = `${tempNowEl}`; 
+    tempEl.innerHTML = `${tempNowEl}`;
 
-    let windEl = document.querySelector('.indicators_data-wind');
-    windEl.innerHTML = `${response.data.wind.speed}`
+    let windEl = document.querySelector(".indicators_data-wind");
+    windEl.innerHTML = `${response.data.wind.speed}`;
 
-    let humidityEl = document.querySelector('.indicators_data-humidity');
-    humidityEl.innerHTML = `${response.data.main.humidity}`
+    let humidityEl = document.querySelector(".indicators_data-humidity");
+    humidityEl.innerHTML = `${response.data.main.humidity}`;
 
-    let precipitationEl = document.querySelector('.indicators_data-precipitation');
-    precipitationEl.innerHTML = `${response.data.wind.speed}`
+    // let precipitationEl = document.querySelector(
+    //   ".indicators_data-precipitation"
+    // );
+    // precipitationEl.innerHTML = `${response.data.wind.speed}`;
 
-    console.log(response.data)
+    let descrEl = document.querySelector(".indicators_data-descr");
+    descrEl.innerHTML = `${response.data.weather[0].description}`;
 
-    
+    let iconEl = document.querySelector(".icon");
+    iconEl.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 
     const degreesFar = function (event) {
-     event.preventDefault();     
-     temp.innerHTML = `${Math.round((tempNowEl * 9) / 5 + 32)}`;
+      event.preventDefault();
+      temp.innerHTML = `${Math.round((tempNowEl * 9) / 5 + 32)}`;
     };
 
     let farTemp = document.querySelector(".far");
     farTemp.addEventListener("click", degreesFar);
 
     const degreesCel = function (event) {
-      event.preventDefault();      
+      event.preventDefault();
       temp.innerHTML = `${tempNowEl}`;
     };
 
     let celTemp = document.querySelector(".cel");
-    celTemp.addEventListener("click", degreesCel);      
-  }; 
-    
+    celTemp.addEventListener("click", degreesCel);
+  };
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
-  
 };
 
 let citySearchForm = document.querySelector(".city-search_form ");
 citySearchForm.addEventListener("submit", citySearch);
-
-
-
-
-
-
-
-
-
