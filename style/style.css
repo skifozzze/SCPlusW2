@@ -12,14 +12,16 @@
 header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 80px;
 }
 
 .weather-now {
-  width: 50%;
+  width: 60%;
   padding: 20px;
   border: 5px solid red;
+  margin-bottom: 20px;
 }
 
 .weather-now_top {
@@ -48,12 +50,13 @@ header {
 
 .city {
   /* margin-left: auto; */
-  margin: 0 auto;
+  margin-left: auto;
   text-transform: capitalize;
 }
 
 .weather-now_bottom {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   color: grey;
 }
@@ -142,4 +145,18 @@ span {
 
 .indicators_data-descr {
   text-transform: capitalize;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.col-2 {
+  text-align: center;
+}
+
+.icon {
+  margin: 0 auto;
 }

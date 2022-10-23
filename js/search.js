@@ -34,7 +34,7 @@ const citySearch = function (event) {
 
     const degreesFar = function (event) {
       event.preventDefault();
-      temp.innerHTML = `${Math.round((tempNowEl * 9) / 5 + 32)}`;
+      tempEl.innerHTML = `${Math.round((tempNowEl * 9) / 5 + 32)}`;
     };
 
     let farTemp = document.querySelector(".far");
@@ -42,7 +42,7 @@ const citySearch = function (event) {
 
     const degreesCel = function (event) {
       event.preventDefault();
-      temp.innerHTML = `${tempNowEl}`;
+      tempEl.innerHTML = `${tempNowEl}`;
     };
 
     let celTemp = document.querySelector(".cel");

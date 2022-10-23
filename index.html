@@ -22,19 +22,13 @@
         <div class="weather-now">
           <div class="weather-now_top">
             <img class="icon" src="images/sun2.svg" alt="sun icon" width="80" />
-
             <div class="temp-box">
               <h1 class="temperature">28</h1>
               <a class="cel" href="">С°</a>
               <span>/</span>
               <a class="far" href="">F°</a>
             </div>
-
             <ul class="indicators">
-              <!-- <li class="indicators_data">
-                precipitation:
-                <span class="indicators_data-precipitation">0</span>%
-              </li> -->
               <li class="indicators_data">
                 humidity: <span class="indicators_data-humidity">33</span>%
               </li>
@@ -54,10 +48,10 @@
         <form class="city-search_form" action="">
           <input class="text" type="text" onfocus="" placeholder="Kyiv" />
           <input class="search" type="submit" value="search" />
-          <input class="current" type="submit" value="current" />
+          <!-- <input class="current" type="submit" value="current" /> -->
         </form>
       </header>
-      <main>
+      <!-- <main>
         <ul class="weather_week">
           <li class="weather_week-day">
             <img
@@ -110,7 +104,9 @@
             <p class="weather_week-temperature">19 ° С / 9 ° С</p>
           </li>
         </ul>
-      </main>
+      </main> -->
+      <div class="weather-forecast" id="forecast"></div>
+
       <h6>
         <a
           class="link"
@@ -124,7 +120,5 @@
 
     <script src="/js/date.js" type="module"></script>
     <script src="/js/search.js" type="module"></script>
-    <!-- <script src="/js/celfar.js" type="module"></script> -->
-    <!-- <script src="/js/script.js" type="module"></script> -->
   </body>
 </html>
